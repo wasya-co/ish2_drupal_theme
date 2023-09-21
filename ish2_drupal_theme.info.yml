@@ -1,0 +1,26 @@
+base theme: ish_drupal_theme
+core_version_requirement: ^9
+dependencies:
+  - drupal:views
+name: ish2_drupal_theme
+starterkit: true
+type: theme
+
+regions:
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  filters: 'Filters'
+  footer: 'Footer'
+  header: 'Header'
+  help: 'Help'
+  highlighted: 'Highlighted'
+  page_bottom: 'Page bottom'
+  page_top: 'Page top'
+  postfooter: 'Postfooter'
+  preheader: 'Preheader'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  sidebar_first: 'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+
+version: VERSION
