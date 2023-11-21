@@ -5,7 +5,9 @@ dependencies:
 name: ish2_drupal_theme
 starterkit: true
 type: theme
-
+libraries:
+  - ish_drupal_theme/base
+  - ish2_drupal_theme/base
 regions:
   breadcrumb: 'Breadcrumb'
   content: 'Content'
