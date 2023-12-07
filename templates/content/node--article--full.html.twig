@@ -1,0 +1,58 @@
+
+{#
+  2023-12-07 :: this is in ish2_drupal_theme, b/c this is not generic enough?
+#}
+{%
+  set classes = [
+    'Article',
+
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('ish_drupal_theme/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+  <div style="background: #666;">
+    {{ content.field_image_hero }}
+  </div>
+  <br />
+
+
+  <div class='container maxwidth'>
+    <div class='row'>
+      <div class='col-4 col-md-2'>
+        {{ content.field_vote_up_down }}
+      </div>
+      <div class='col-8 col-md-10'>
+        <div class="header-v0-1-0" >
+          <h2 class='maxwidth' >{{ label }}</h2>
+        </div>
+        {% if display_submitted %}
+          <footer class="node__meta">
+            {{ author_picture }}
+            <div{{ author_attributes.addClass('node__submitted') }}>
+              {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+              {{ metadata }}
+            </div>
+          </footer>
+          {{ content.field_city }}
+          {{ content.field_citytag }}
+          {{ content.field_issue }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <div{{ content_attributes.addClass(['node__content', 'maxwidth']) }}>
+    {{ content | without('field_image_hero', 'field_vote_up_down', 'field_city', 'field_issue' ) }}
+  </div>
+
+  <div class="clearfix"></div>
+
+</article>
