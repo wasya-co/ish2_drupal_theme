@@ -43,6 +43,8 @@
           {{ content.field_city }}
           {{ content.field_citytag }}
           {{ content.field_issue }}
+          {{ content.field_tags }}
+          {{ content.field_tag_contrib }}
         {% endif %}
       </div>
     </div>
@@ -50,7 +52,7 @@
   <br />
 
   <div{{ content_attributes.addClass(['node__content', 'maxwidth']) }}>
-    {{ content | without('field_image_hero', 'field_vote_up_down', 'field_city', 'field_issue' ) }}
+    {{ content | without('field_image_hero', 'field_vote_up_down', 'field_city', 'field_issue', 'field_tags', 'field_tag_contrib' ) }}
   </div>
 
   <div class="clearfix"></div>
