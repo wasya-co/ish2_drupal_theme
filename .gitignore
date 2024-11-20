@@ -1,0 +1,5 @@
+*trash
+.access
+node_modules
+vendor
+

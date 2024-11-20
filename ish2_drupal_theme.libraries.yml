@@ -1,0 +1,6 @@
+base:
+  version: VERSION
+  css:
+    base:
+      css/main.css:
+        weight: 20
