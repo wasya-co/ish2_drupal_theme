@@ -25,6 +25,7 @@
     .region-header a.site-logo img {
       max-width: 100px; } }
 
+/* N */
 .node-47 .images {
   display: flex;
   flex-direction: column;
@@ -33,3 +34,7 @@
     max-height: 80vh;
     width: auto;
     margin: 1em; }
+
+/* R */
+.region-content {
+  margin: 0 1em; }
